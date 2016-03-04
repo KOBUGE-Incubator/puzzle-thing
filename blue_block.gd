@@ -1,5 +1,5 @@
 
-extends StaticBody2D
+extends RigidBody2D
 
 # member variables here, example:
 # var a=2
@@ -7,8 +7,18 @@ extends StaticBody2D
 var r
 const GRAVITY = 50.0
 var velocity = Vector2()
-func _process(delta):
+var color = "blue"
+var same_color_list = []
+
+func _fixed_process(delta):
 	velocity.y += delta * GRAVITY
+
+	for i in get_colliding_bodies():
+		if (i.get_type() == "RigidBody2D" and i.color == color):
+			same_color_list.append(i)
+	if(same_color_list.size() >= 4):
+		for x in same_color_list:
+			x.queue_free()
 	if(r.get_collider() == null):
 		r.set_cast_to(r.get_cast_to() + Vector2(0, 64))
 	else:
@@ -26,6 +36,7 @@ func _process(delta):
 
 	
 func _ready():
+	set_contact_monitor(true)
 	r = get_node("RayCast2D")
-	set_process(true)
+	set_fixed_process(true)
 

@@ -9,7 +9,7 @@ var dino
 var elapsed_time = 0
 var bomb_delay = .2
 var screen_size = OS.get_window_size()
-var bomb_count = 20
+var bomb_count = 10000
 var time
 var bomb_fuse = 0
 var bomb_count_label
@@ -50,7 +50,6 @@ func _fixed_process(delta):
 	if (Input.is_action_pressed(bomb)):
 		bomb_fuse += delta
 		elapsed_time += delta
-	print(Input.get_joy_axis(0, 2)+ Input.get_joy_axis(0, 3))
 
 func _input(ev):
 	if(ev.is_action_pressed(jump) and jumping):
