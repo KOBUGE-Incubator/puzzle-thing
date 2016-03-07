@@ -1,7 +1,7 @@
 tool
 extends Node2D
 
-var level_size = 500
+var level_size = 200
 var level_width = 950
 #terrain
 var dirt
@@ -22,9 +22,9 @@ func _ready():
 	#terrain
 	dirt = preload("res://blue_block.scn").instance()
 	treasure = preload("res://red_block.scn").instance()
-	dirt_2 = preload("res://green_block.scn").instance()
-	dirt_3 = preload("res://green_block.scn").instance()
-	dirt_4 = preload("res://yellow_block.scn").instance()
+	dirt_2 = preload("res://blue_block.scn").instance()
+	dirt_3 = preload("res://red_block.scn").instance()
+	dirt_4 = preload("res://blue_block.scn").instance()
 	screen_size = OS.get_window_size()
 	terrain.append(dirt)
 	terrain.append(dirt_2)
@@ -80,7 +80,8 @@ func generate_terrain():
 		if(x_offset > (level_width)):
 			x_offset = 128
 			y_offset += 64
-	get_node("floor").set_global_pos(Vector2(get_node("floor").get_global_pos().x, y_offset+128))
+	get_node("floor").set_global_pos(Vector2(get_node("floor").get_global_pos().x, y_offset-128))
+	
 
 
 

@@ -21,9 +21,7 @@ func _on_Area2D_body_enter( body ):
 	elif(body.get_name() =="Wall_2"):
 		pass
 	else:
-		print(body.get_name())
 		body.queue_free()
-	print(body.get_name())
 
 func _ready():
 	connect("body_enter",self,"_on_Area2D_body_enter")
