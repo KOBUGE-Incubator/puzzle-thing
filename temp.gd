@@ -18,7 +18,6 @@ func check_if_falling():
 	return false
 
 func check_level():
-	
 	for block in get_children():
 		if not block.falling:
 			check_level_recur(block)
@@ -32,12 +31,11 @@ func check_level():
 	#					block.delete = true
 	#		else:
 	#			pass
-	
 			var color_list = []
 			for block in get_children():
 				if block.visited == true:
 					color_list.append(block)
-			if color_list.size() >= 4:
+			if color_list.size() >= 3:
 				for i in color_list:
 					i.queue_free()
 			else:
@@ -45,14 +43,11 @@ func check_level():
 					x.visited = false
 		set_process(true)
 
-
-
 #I'm going to try and use this count thing to flip a flag and then trickle that up to the root node...
 func check_level_recur(block):
 	for b in block.get_colliding_bodies():
 
-		if(b.get_type() == "RigidBody2D"):
-			
+		if(b.get_type() == "RigidBody2D" and b.get_name() != 'RigidBody2D'):
 			if b.color == block.color and b.visited == false:
 				b.visited = true
 				check_level_recur(b)

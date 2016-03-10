@@ -1,7 +1,7 @@
 tool
 extends Node2D
 
-var level_size = 500
+var level_size = 5000
 var level_width = 950
 #terrain
 var dirt
@@ -76,9 +76,9 @@ func generate_terrain():
 			treasure_count += 1
 		node.translate(Vector2(x_offset, y_offset))
 		level.add_child(node)
-		x_offset += 128
+		x_offset += 64
 		if(x_offset > (level_width)):
-			x_offset = 128
+			x_offset = 64
 			y_offset += 64
 	get_node("floor").set_global_pos(Vector2(get_node("floor").get_global_pos().x, y_offset+128))
 
