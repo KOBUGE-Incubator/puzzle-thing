@@ -14,6 +14,7 @@ func _process(delta):
 func check_if_falling():
 	for block in get_children():
 		if block.falling == true:
+			_exit_tree()
 			return true
 	return false
 

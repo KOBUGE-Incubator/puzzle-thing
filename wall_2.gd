@@ -11,3 +11,4 @@ func _process(delta):
 func _ready():
 	screen_width = get_parent().level_width + 20
 	set_process(true)
+	

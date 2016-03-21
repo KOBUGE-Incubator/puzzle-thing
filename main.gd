@@ -1,7 +1,7 @@
 tool
 extends Node2D
 
-var level_size = 5000
+var level_size = 100
 var level_width = 950
 #terrain
 var dirt
