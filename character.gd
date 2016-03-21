@@ -68,14 +68,11 @@ func _input(ev):
 			get_parent().add_child(bomb)
 			elapsed_time = 0
 			bomb_count += -1
-			bomb_count_label.set_text("Player 1 | Bombs: " + str(bomb_count))
 			bomb_fuse = 0
 			
 func treasure():
 	treasure += 1
-	treasure_label.set_text("treasure: " + str(treasure))
 	bomb_count += 2
-	bomb_count_label.set_text("Player 2 | Bombs: " + str(bomb_count))
 	
 func configure_controls():
 	if(get_name() == "character_1"):

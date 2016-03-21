@@ -21,7 +21,7 @@ func check_if_falling():
 func check_level():
 	for block in get_children():
 		if not block.falling:
-			check_level_recur(block)
+#			check_level_recur(block)
 	#		if not block.delete:
 	#			for i in block.get_colliding_bodies():
 	#				if (i.get_type() == "RigidBody2D" and i.color == block.color):

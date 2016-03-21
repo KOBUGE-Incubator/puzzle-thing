@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var falling = false
-
+var visited = false
 func _fixed_process(delta):
 	pass
 
