@@ -35,8 +35,6 @@ func _ready():
 	var wall_2 = get_node("Wall_2")
 	wall_2.set_global_pos(Vector2(screen_size.x-700, wall_2.get_global_pos().y))
 	set_process(true)
-	game_end = get_parent().get_parent().get_parent().get_node("game_end")
-	game_end.set_percent_visible(0)
 	get_parent().set_transparent_background(true)
 	
 	#Add characters
