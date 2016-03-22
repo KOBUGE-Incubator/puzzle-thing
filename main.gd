@@ -1,8 +1,8 @@
 tool
 extends Node2D
 
-var level_size = 100
-var level_width = 950
+var level_size = 200
+var level_width = 500
 #terrain
 var dirt
 var treasure
@@ -12,7 +12,7 @@ var terrain = []
 var dirt_2
 var dirt_4
 var dirt_3
-var x_offset = 128
+var x_offset = 64
 var y_offset = 128
 var treasure_count = 0
 var game_end
@@ -42,26 +42,12 @@ func _ready():
 	
 func generate_characters():
 	for x in range(0, player_count):
-		var player = preload("res://character.scn").instance()
+		var player = preload("res://character.tscn").instance()
 		var new_player = player.duplicate()
 		players_added += 1
 		new_player.set_name("character_" + str(x))
 		add_child(new_player)
 	get_node("Camera2D").load_camera()
-	
-func _process(delta):
-	pass
-	#Error res://main.gd:55 - Invalid get index 'treasure' (on base: 'null instance').
-#	if((get_node("character_1").treasure + get_node("character_2").treasure) <= treasure_count):
-#		if(get_node("character_1").treasure > get_node("character_2").treasure):
-#			game_end.set_text("Player one wins!")
-#		else:
-#			game_end.set_text("Player two wins!")
-#		game_end.set_percent_visible(100.0)
-#	if(get_node("character_1").bomb_count + get_node("character_2").bomb_count == 0):
-#		treasure_count = 0
-#	else:
-#		game_end.set_percent_visible(0)
 
 	
 func generate_terrain():
@@ -70,11 +56,10 @@ func generate_terrain():
 	for i in range(0, level_size):
 		randomize()
 		node = terrain[rand_range(0,5)].duplicate()
-		if node.get_name() == "treasure":
-			treasure_count += 1
 		node.translate(Vector2(x_offset, y_offset))
 		level.add_child(node)
-		x_offset += 64
+		#For some reason, if this is set to 64 the fifth column is screwed up somehow.
+		x_offset += 63
 		if(x_offset > (level_width)):
 			x_offset = 64
 			y_offset += 64
