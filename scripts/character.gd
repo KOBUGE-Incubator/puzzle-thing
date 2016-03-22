@@ -85,16 +85,16 @@ func configure_controls():
 		right = "right2"
 		jump = "jump2"
 		bomb = "bomb2"
-		get_node("Potatoe").queue_free()
+		get_node("character").queue_free()
 		
-		add_child(load("melrosemuligan.scn").instance())
+		add_child(load("res://scenes/character2.tscn").instance())
 	else:
 		left = "left2"
 		right = "right2"
 		jump = "jump2"
 		bomb = "bomb"
-		get_node("Potatoe").queue_free()
-		var player = load("melrosemuligan.scn")
+		get_node("character").queue_free()
+		var player = load("res://scenes/character2.tscn")
 		var new_player = player.duplicate()
 		add_child(new_player)
 		
@@ -106,7 +106,7 @@ func _ready():
 	set_fixed_process(true)
 	get_parent().get_node("Wall").connect("body_enter",self,"_left_wall_collide")
 	get_parent().get_node("Wall_2").connect("body_exit",self,"_right_wall_collide")
-	dino = preload("res://dynamite.scn").instance()
+	dino = preload("res://scenes/dynamite.tscn").instance()
 	add_to_group("players")
 	
 		

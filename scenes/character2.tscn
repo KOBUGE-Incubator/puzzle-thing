@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://melrosemuligan.scn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.7843, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 74.6011, 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0.975357, 21.0053 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 2
+collision/margin = 0.08
+__meta__ = { "__editor_plugin_screen__":"Script" }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0.975357, 21.0053 )
+z/relative = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="character_wall_col" type="Area2D" parent="."]
+
+transform/pos = Vector2( -0.524475, -0.874123 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 0.0452847, -0, 0, 1, -27.3668, -3.63953 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="character_wall_col"]
+
+transform/pos = Vector2( -27.3668, -3.63953 )
+transform/scale = Vector2( 0.0452847, 1 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="character_wall_col1" type="Area2D" parent="."]
+
+transform/pos = Vector2( -0.524475, -0.874123 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 0.0775161, -0, 0, 1, 26.6363, -2.45041 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="character_wall_col1"]
+
+transform/pos = Vector2( 26.6363, -2.45041 )
+transform/scale = Vector2( 0.0775161, 1 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Wiley" parent="." instance=ExtResource( 1 )]
+
+

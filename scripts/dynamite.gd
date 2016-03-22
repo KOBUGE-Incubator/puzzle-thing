@@ -29,7 +29,7 @@ func _on_Area2D_body_exit(body):
 		queue_free()
 
 func _ready():
-	L = preload("res://L_explosion.scn").instance()
+	L = preload("res://scenes/explosion.tscn").instance()
 	bomb_list = [L, T]
 	set_process(true)
 	get_node("Area2D").connect("body_enter",self,"_on_Area2D_body_enter")

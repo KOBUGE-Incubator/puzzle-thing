@@ -3,7 +3,7 @@ extends RigidBody2D
 const GRAVITY = 200.0
 var velocity = Vector2()
 
-var falling = false
+var falling = true
 var visited = false
 var bottom
 func _fixed_process(delta):
@@ -25,4 +25,4 @@ func _ready():
 	
 	bottom.connect("body_enter",self,"_on_Area2D_body_enter")
 	bottom.connect("body_exit",self,"_on_Area2D_body_exit")
-	
+	get_name()
