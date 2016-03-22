@@ -7,12 +7,12 @@ extends Node2D
 var falling = false
 var count = 0
 var t = 0
-var same_color_list = []
 
 func _process(delta):
 	t += delta
 	for block in get_children():
-		block.get_node("Label").set_text(block.get_name().split("yellow")[1])
+		block.get_node("Label").set_text(block.get_name().split("_")[1])
+#		block.get_node("Label").set_text(block.color)
 
 	
 func check_if_falling():
@@ -22,12 +22,14 @@ func check_if_falling():
 	return false
 
 func check_level(block):
+	print("--------------------")
 	check_level_recur(block, 0)
 	var color_list = []
 
 	for block in get_children():
-		if block.visited == true:
+		if block.delete == true:
 			color_list.append(block)
+	print("color LIST")
 	for node in color_list:
 		print(node.get_name())
 	if color_list.size() >= 4:
@@ -37,17 +39,26 @@ func check_level(block):
 		print(color_list)
 		for x in color_list:
 			x.visited = false
-		color_list = []
+			x.delete = false
+	color_list = []
 
 #I'm going to try and use this count thing to flip a flag and then trickle that up to the root node...
 func check_level_recur(block, count):
-	print(block.get_colliding_bodies())
 	var blocks = block_colliding_bodies(block)
 	block.visited = true
+	print("From")
+	print(block.get_name())
 	for b in blocks:
+		print("to")
+		print(b.get_name())
 		if(b.get_type() == "RigidBody2D" and b.get_name() != 'RigidBody2D'):
+			if b.color == block.color:
+				b.delete = true
+				block.delete = true
 			if b.color == block.color and b.visited == false:
-				return check_level_recur(b, count + 1)
+				check_level_recur(b, count + 1)
+			else:
+				return
 				
 	
 

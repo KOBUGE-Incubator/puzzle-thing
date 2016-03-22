@@ -85,7 +85,7 @@ _update_shape_index = 0
 
 [node name="right" type="Area2D" parent="."]
 
-transform/pos = Vector2( 33, -1.44248e-06 )
+transform/pos = Vector2( 43, -1.87959e-06 )
 transform/rot = 90.0
 input/pickable = true
 shapes/0/shape = SubResource( 3 )
@@ -123,11 +123,11 @@ _update_shape_index = 0
 
 [node name="left" type="Area2D" parent="."]
 
-transform/pos = Vector2( -33, 0 )
+transform/pos = Vector2( -40, -3.0598e-07 )
 transform/rot = -90.0
 input/pickable = true
 shapes/0/shape = SubResource( 5 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -160,7 +160,7 @@ transform/pos = Vector2( 0.0852527, 33.4032 )
 transform/rot = -180.0
 input/pickable = true
 shapes/0/shape = SubResource( 4 )
-shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, -1.98383 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -1.98383 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
