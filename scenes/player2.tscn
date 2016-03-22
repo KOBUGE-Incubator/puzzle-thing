@@ -1,0 +1,331 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://art/foot.png" type="Texture" id=1]
+[ext_resource path="res://art/hand2.png" type="Texture" id=2]
+[ext_resource path="res://art/body2.png" type="Texture" id=3]
+[ext_resource path="res://art/head2.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "New Anim"
+length = 2.3
+loop = false
+step = 0.24
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/RemoteTransform2D 2/Position2D:transform/pos")
+tracks/0/interp = 1
+tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.48, 0.96, 1.68 ), "transitions":FloatArray( 1, 1, 1, 1 ), "values":[ Vector2( 14, 78 ), Vector2( 14, 78 ), Vector2( 14, 78 ), Vector2( 14, 78 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/RemoteTransform2D 2/Position2D:transform/rot")
+tracks/1/interp = 1
+tracks/1/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body/RemoteTransform2D 2:transform/pos")
+tracks/2/interp = 1
+tracks/2/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body/RemoteTransform2D 2:transform/rot")
+tracks/3/interp = 1
+tracks/3/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body:transform/pos")
+tracks/4/interp = 1
+tracks/4/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body:transform/rot")
+tracks/5/interp = 1
+tracks/5/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("body/RemoteTransform2D/Position2D:transform/pos")
+tracks/6/interp = 1
+tracks/6/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("body/RemoteTransform2D/Position2D:transform/rot")
+tracks/7/interp = 1
+tracks/7/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("body/RemoteTransform2D:transform/pos")
+tracks/8/interp = 1
+tracks/8/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/9/type = "value"
+tracks/9/path = NodePath("body/RemoteTransform2D:transform/rot")
+tracks/9/interp = 1
+tracks/9/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/10/type = "value"
+tracks/10/path = NodePath("body/RemoteTransform2D 3/Position2D:transform/pos")
+tracks/10/interp = 1
+tracks/10/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/11/type = "value"
+tracks/11/path = NodePath("body/RemoteTransform2D 3/Position2D:transform/rot")
+tracks/11/interp = 1
+tracks/11/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/12/type = "value"
+tracks/12/path = NodePath("body/RemoteTransform2D 3:transform/pos")
+tracks/12/interp = 1
+tracks/12/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/13/type = "value"
+tracks/13/path = NodePath("body/RemoteTransform2D 3:transform/rot")
+tracks/13/interp = 1
+tracks/13/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/14/type = "value"
+tracks/14/path = NodePath("body/head/Position2D:transform/pos")
+tracks/14/interp = 1
+tracks/14/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/15/type = "value"
+tracks/15/path = NodePath("body/head/Position2D:transform/rot")
+tracks/15/interp = 1
+tracks/15/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/16/type = "value"
+tracks/16/path = NodePath("body/head:transform/pos")
+tracks/16/interp = 1
+tracks/16/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/17/type = "value"
+tracks/17/path = NodePath("body/head:transform/rot")
+tracks/17/interp = 1
+tracks/17/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/18/type = "value"
+tracks/18/path = NodePath("body/r_arm/Position2D:transform/pos")
+tracks/18/interp = 1
+tracks/18/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/19/type = "value"
+tracks/19/path = NodePath("body/r_arm/Position2D:transform/rot")
+tracks/19/interp = 1
+tracks/19/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/20/type = "value"
+tracks/20/path = NodePath("body/r_arm:transform/pos")
+tracks/20/interp = 1
+tracks/20/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/21/type = "value"
+tracks/21/path = NodePath("body/r_arm:transform/rot")
+tracks/21/interp = 1
+tracks/21/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/22/type = "value"
+tracks/22/path = NodePath(".:transform/pos")
+tracks/22/interp = 1
+tracks/22/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/23/type = "value"
+tracks/23/path = NodePath(".:transform/rot")
+tracks/23/interp = 1
+tracks/23/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/24/type = "value"
+tracks/24/path = NodePath("R_leg:transform/pos")
+tracks/24/interp = 1
+tracks/24/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/25/type = "value"
+tracks/25/path = NodePath("R_leg:transform/rot")
+tracks/25/interp = 1
+tracks/25/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/26/type = "value"
+tracks/26/path = NodePath("l_arm:transform/pos")
+tracks/26/interp = 1
+tracks/26/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/27/type = "value"
+tracks/27/path = NodePath("l_arm:transform/rot")
+tracks/27/interp = 1
+tracks/27/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/28/type = "value"
+tracks/28/path = NodePath("L-leg:transform/pos")
+tracks/28/interp = 1
+tracks/28/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/29/type = "value"
+tracks/29/path = NodePath("L-leg:transform/rot")
+tracks/29/interp = 1
+tracks/29/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/30/type = "value"
+tracks/30/path = NodePath("body/RemoteTransform2D/Position2D/Position2D:transform/pos")
+tracks/30/interp = 1
+tracks/30/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/31/type = "value"
+tracks/31/path = NodePath("body/RemoteTransform2D/Position2D/Position2D:transform/rot")
+tracks/31/interp = 1
+tracks/31/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/32/type = "value"
+tracks/32/path = NodePath("body/RemoteTransform2D 3/Position2D/Position2D:transform/pos")
+tracks/32/interp = 1
+tracks/32/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/33/type = "value"
+tracks/33/path = NodePath("body/RemoteTransform2D 3/Position2D/Position2D:transform/rot")
+tracks/33/interp = 1
+tracks/33/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/34/type = "value"
+tracks/34/path = NodePath("body/RemoteTransform2D 2/Position2D/Position2D:transform/pos")
+tracks/34/interp = 1
+tracks/34/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/35/type = "value"
+tracks/35/path = NodePath("body/RemoteTransform2D 2/Position2D/Position2D:transform/rot")
+tracks/35/interp = 1
+tracks/35/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/36/type = "value"
+tracks/36/path = NodePath("body/r_arm/Position2D/Position2D:transform/pos")
+tracks/36/interp = 1
+tracks/36/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/37/type = "value"
+tracks/37/path = NodePath("body/r_arm/Position2D/Position2D:transform/rot")
+tracks/37/interp = 1
+tracks/37/keys = { "cont":true, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "rotate"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/scale")
+tracks/0/interp = 1
+tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 1, 1 ), "values":[ Vector2( 0.2, 0.2 ), Vector2( -0.2, 0.2 ) ] }
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "rotate_2"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/scale")
+tracks/0/interp = 1
+tracks/0/keys = { "cont":true, "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "values":[ Vector2( -0.2, 0.2 ), Vector2( 0.2, 0.2 ) ] }
+
+[node name="Potatoe" type="Node2D"]
+
+transform/scale = Vector2( -0.2, 0.2 )
+__meta__ = { "__editor_plugin_screen__":"Script", "_edit_ik_":true }
+
+[node name="R_leg" type="Sprite" parent="."]
+
+transform/pos = Vector2( -34.3515, 62.1556 )
+transform/rot = -47.5817
+transform/scale = Vector2( 0.782537, 0.842539 )
+texture = ExtResource( 1 )
+offset = Vector2( 18.5336, 65.0918 )
+
+[node name="L-leg" type="Sprite" parent="."]
+
+transform/pos = Vector2( 80.5603, 49.3669 )
+transform/rot = -5.60256
+transform/scale = Vector2( 0.702246, 0.872103 )
+texture = ExtResource( 1 )
+offset = Vector2( 9.29313, 49.5322 )
+
+[node name="l_arm" type="Sprite" parent="."]
+
+transform/pos = Vector2( 40.8052, -18.3759 )
+transform/rot = 117.723
+transform/scale = Vector2( 0.773154, 0.762878 )
+texture = ExtResource( 2 )
+offset = Vector2( -18.9877, 45.0688 )
+
+[node name="body" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0.218231, 1.22321 )
+transform/rot = -342.459
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+__meta__ = { "_edit_ik_":true }
+
+[node name="head" type="Sprite" parent="body"]
+
+transform/pos = Vector2( 33.969, -125.313 )
+transform/rot = -6.84871
+transform/scale = Vector2( 1.12384, 1.12384 )
+texture = ExtResource( 4 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/head"]
+
+transform/pos = Vector2( 18.0423, 30.8223 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="r_arm" type="Sprite" parent="body"]
+
+transform/pos = Vector2( -54.387, -10.2616 )
+transform/rot = 76.2703
+transform/scale = Vector2( 0.630634, 0.630634 )
+texture = ExtResource( 2 )
+offset = Vector2( -17.1308, 49.7393 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="Position2D" type="Position2D" parent="body/r_arm"]
+
+transform/pos = Vector2( -25.3138, 74.4295 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/r_arm/Position2D"]
+
+__meta__ = { "_edit_bone_":true }
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="body"]
+
+transform/pos = Vector2( -51.3264, 47.6805 )
+transform/rot = -65.1225
+transform/scale = Vector2( 0.782537, 0.842539 )
+remote_path = NodePath("../../R_leg")
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D"]
+
+transform/pos = Vector2( 19, 113 )
+transform/rot = 113.407
+transform/scale = Vector2( 1.21731, 0.828761 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D/Position2D"]
+
+transform/pos = Vector2( -8.68255, 35.8167 )
+transform/scale = Vector2( 1.72109, 1 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="RemoteTransform2D 2" type="RemoteTransform2D" parent="body"]
+
+transform/pos = Vector2( 62.0967, 70.119 )
+transform/rot = -23.1433
+transform/scale = Vector2( 0.702246, 0.872103 )
+remote_path = NodePath("../../L-leg")
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 2"]
+
+transform/pos = Vector2( 14.0002, 78 )
+transform/rot = 28.1064
+transform/scale = Vector2( 1.41455, 0.953662 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 2/Position2D"]
+
+transform/pos = Vector2( 48.7536, 0.829525 )
+transform/scale = Vector2( -1.82619, -0.448619 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="RemoteTransform2D 3" type="RemoteTransform2D" parent="body"]
+
+transform/pos = Vector2( 44.6066, -6.45555 )
+transform/rot = 100.182
+transform/scale = Vector2( 0.773154, 0.762878 )
+remote_path = NodePath("../../l_arm")
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 3"]
+
+transform/pos = Vector2( -25.8316, 68.54 )
+transform/scale = Vector2( 1.00083, 0.999186 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 3/Position2D"]
+
+transform/pos = Vector2( 32.7701, 14.9496 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/New Anim = SubResource( 1 )
+anims/rotate = SubResource( 2 )
+anims/rotate_2 = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+

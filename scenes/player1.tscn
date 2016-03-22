@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://art/foot.png" type="Texture" id=1]
+[ext_resource path="res://art/hand.png" type="Texture" id=2]
+[ext_resource path="res://art/body.png" type="Texture" id=3]
+[ext_resource path="res://art/head.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+transform/scale = Vector2( -0.2, 0.2 )
+__meta__ = { "__editor_plugin_screen__":"2D", "_edit_ik_":true }
+
+[node name="R_leg" type="Sprite" parent="."]
+
+transform/pos = Vector2( -58.4294, 54.6059 )
+transform/rot = 1.83459
+transform/scale = Vector2( 0.782537, 0.842538 )
+texture = ExtResource( 1 )
+offset = Vector2( 18.5336, 65.0918 )
+
+[node name="L-leg" type="Sprite" parent="."]
+
+transform/pos = Vector2( 58.5977, 72.8719 )
+transform/rot = -19.9443
+transform/scale = Vector2( 0.702246, 0.86731 )
+texture = ExtResource( 1 )
+offset = Vector2( 9.29313, 49.5322 )
+
+[node name="l_arm" type="Sprite" parent="."]
+
+transform/pos = Vector2( 44.8634, -4.32492 )
+transform/rot = 97.4539
+transform/scale = Vector2( 0.773154, 0.762878 )
+texture = ExtResource( 2 )
+offset = Vector2( -18.9877, 45.0688 )
+
+[node name="body" type="Sprite" parent="."]
+
+transform/rot = 357.272
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+__meta__ = { "_edit_ik_":true }
+
+[node name="head" type="Sprite" parent="body"]
+
+transform/pos = Vector2( 19.1333, -112.546 )
+transform/rot = -6.84871
+transform/scale = Vector2( 1.33021, 1.33021 )
+texture = ExtResource( 4 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/head"]
+
+transform/pos = Vector2( 18.0423, 30.8223 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="r_arm" type="Sprite" parent="body"]
+
+transform/pos = Vector2( -54.387, -10.2616 )
+transform/rot = 76.2703
+transform/scale = Vector2( 0.630634, 0.630634 )
+texture = ExtResource( 2 )
+offset = Vector2( -17.1308, 49.7393 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="Position2D" type="Position2D" parent="body/r_arm"]
+
+transform/pos = Vector2( -25.3138, 74.4295 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/r_arm/Position2D"]
+
+__meta__ = { "_edit_bone_":true }
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="body"]
+
+transform/pos = Vector2( -55.7639, 57.3253 )
+transform/rot = 4.56294
+transform/scale = Vector2( 0.782537, 0.842538 )
+remote_path = NodePath("../../R_leg")
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D"]
+
+transform/pos = Vector2( 19, 113 )
+transform/rot = 113.407
+transform/scale = Vector2( 1.21731, 0.828761 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D/Position2D"]
+
+transform/pos = Vector2( -8.68255, 35.8167 )
+transform/scale = Vector2( 1.72109, 1 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="RemoteTransform2D 2" type="RemoteTransform2D" parent="body"]
+
+transform/pos = Vector2( 62, 70 )
+transform/rot = -17.2159
+transform/scale = Vector2( 0.702246, 0.86731 )
+remote_path = NodePath("../../L-leg")
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 2"]
+
+transform/pos = Vector2( 14, 78 )
+transform/scale = Vector2( 1.11941, 1.01213 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 2/Position2D"]
+
+transform/pos = Vector2( 48.7536, 0.829525 )
+transform/scale = Vector2( -1.82619, -0.448619 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="RemoteTransform2D 3" type="RemoteTransform2D" parent="body"]
+
+transform/pos = Vector2( 44.6066, -6.45555 )
+transform/rot = 100.182
+transform/scale = Vector2( 0.773154, 0.762878 )
+remote_path = NodePath("../../l_arm")
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 3"]
+
+transform/pos = Vector2( -25.8316, 68.54 )
+transform/scale = Vector2( 1.00083, 0.999186 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="Position2D" type="Position2D" parent="body/RemoteTransform2D 3/Position2D"]
+
+transform/pos = Vector2( 32.7701, 14.9496 )
+__meta__ = { "_edit_bone_":true }
+
+
