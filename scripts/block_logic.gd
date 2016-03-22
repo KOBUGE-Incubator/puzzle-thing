@@ -2,10 +2,11 @@ extends RigidBody2D
 
 const GRAVITY = 200.0
 var velocity = Vector2()
-
+var color = 'blue'
 var falling = true
 var visited = false
 var bottom
+var delete = false
 func _fixed_process(delta):
 	velocity.y += delta * GRAVITY
 	var motion = velocity * delta
@@ -15,6 +16,7 @@ func _fixed_process(delta):
 #Signals are used to control start and stop falling
 func _on_Area2D_body_enter(body):
 	falling = false
+	get_parent().check_level(self)
 
 func _on_Area2D_body_exit(body):
 	falling = true
@@ -25,4 +27,7 @@ func _ready():
 	
 	bottom.connect("body_enter",self,"_on_Area2D_body_enter")
 	bottom.connect("body_exit",self,"_on_Area2D_body_exit")
-	get_name()
+	if(get_name()[0] == "@"):
+		color = get_name().split("_")[0].split("@")[1]
+	else:
+		color = get_name().split("_")[0]

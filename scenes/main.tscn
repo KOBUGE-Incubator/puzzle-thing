@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scripts/camera.gd" type="Script" id=2]
 [ext_resource path="res://scripts/clear_check.gd" type="Script" id=3]
 [ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/wall_2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/test.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -39,9 +40,9 @@ drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 script/script = ExtResource( 2 )
 
-[node name="floor" type="RigidBody2D" parent="."]
+[node name="floor" type="StaticBody2D" parent="."]
 
-transform/pos = Vector2( 265.251, 7548.91 )
+transform/pos = Vector2( 265.251, 188.909 )
 transform/scale = Vector2( 40.0608, 1 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -49,21 +50,10 @@ shapes/0/transform = Matrix32( 0.01, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
-mode = 1
-mass = 1.0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
 __meta__ = { "_editor_collapsed":true }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
@@ -87,4 +77,14 @@ transform/pos = Vector2( -74, 0 )
 transform/pos = Vector2( 982.091, 0 )
 script/script = ExtResource( 5 )
 
+[node name="Node2D" parent="." instance=ExtResource( 6 )]
 
+transform/pos = Vector2( 51.7021, -21 )
+script/script = ExtResource( 3 )
+
+[node name="yellow_block" parent="Node2D"]
+
+transform/pos = Vector2( 128, -144 )
+
+
+[editable path="Node2D"]
