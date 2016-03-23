@@ -9,6 +9,23 @@
 
 texture = ExtResource( 2 )
 
+[node name="bottom" parent="."]
+
+linear_damp = 0.1
+
+[node name="right" parent="."]
+
+linear_damp = 0.1
+
+[node name="top" parent="."]
+
+transform/pos = Vector2( -3.13918e-06, -40.727 )
+linear_damp = 0.1
+
+[node name="left" parent="."]
+
+linear_damp = 0.1
+
 [node name="Label" parent="."]
 
 margin/left = -31.0
@@ -17,5 +34,9 @@ margin/right = 78.0
 margin/bottom = 63.0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.320312, 0.255249, 0.255249, 1 )
+
+[node name="bot" parent="."]
+
+linear_damp = 0.1
 
 

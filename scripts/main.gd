@@ -1,8 +1,8 @@
 tool
 extends Node2D
 
-var level_size = 200
-var level_width = 500
+var level_size = 500
+var level_width = 750
 #terrain
 var screen_size
 var terrain = []
