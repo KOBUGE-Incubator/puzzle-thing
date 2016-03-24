@@ -61,7 +61,7 @@ func generate_terrain():
 		x_offset += 64
 		if(x_offset > (level_width)):
 			x_offset = 64
-			y_offset += 64.5
+			y_offset += 68
 	get_node("floor").set_global_pos(Vector2(get_node("floor").get_global_pos().x, y_offset+64))
 
 
